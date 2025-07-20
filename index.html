@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Mendhak ❤️ Mendhakini</title>
+
+<!-- Stylish Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pri:#ff4d79;
+  --sec:#ffd166;
+  --dark:#1f1f1f;
+  --light:#fff;
+  --grad:linear-gradient(135deg,var(--pri),var(--sec));
+  scroll-behavior:smooth;
+}
+
+/* GLOBAL */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Poppins',sans-serif;
+  color:var(--dark);
+  background:#fffaf7;
+  overflow-x:hidden;
+}
+h1,h2{font-family:'Dancing Script',cursive;letter-spacing:.5px;}
+section{
+  min-height:100vh;
+  padding:80px 10vw 60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+}
+section:nth-child(even){background:#fff3e9;}
+.emoji{font-size:1.4em;}
+/* BUTTON */
+.btn{
+  background:var(--grad);
+  color:#fff;
+  padding:14px 28px;
+  border:none;
+  border-radius:50px;
+  font-size:1.2rem;
+  cursor:pointer;
+  transition:.4s;
+}
+.btn:hover{transform:scale(1.05) rotate(-2deg);}
+.hide{display:none;}
+
+/* ANIMATIONS (20+) */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInL{from{transform:translateX(-100%)}to{transform:translateX(0)}}
+@keyframes slideInR{from{transform:translateX(100%)}to{transform:translateX(0)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes zoomIn{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes rotateIn{from{transform:rotate(-360deg);opacity:0}to{transform:rotate(0);opacity:1}}
+@keyframes heartBeat{0%,40%,80%,100%{transform:scale(1)}20%,60%{transform:scale(1.2)}}
+@keyframes swing{20%{transform:rotate(15deg)}40%{transform:rotate(-10deg)}60%{transform:rotate(5deg)}80%{transform:rotate(-5deg)}100%{transform:rotate(0)}}
+@keyframes bounceIn{from,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale(.3) translateY(-2000px);transform:scale(.3) translateY(-2000px)}60%{opacity:1;-webkit-transform:scale(1.05) translateY(30px);transform:scale(1.05) translateY(30px)}80%{-webkit-transform:scale(.95) translateY(-10px);transform:scale(.95) translateY(-10px)}to{opacity:1;-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0)}}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-15px)}100%{transform:translateY(0)}}
+@keyframes glow{from{box-shadow:0 0 5px var(--pri)}to{box-shadow:0 0 20px var(--pri)}}
+@keyframes wobble{0%{transform:none}15%{transform:translateX(-25%) rotate(-5deg)}30%{transform:translateX(20%) rotate(3deg)}45%{transform:translateX(-15%) rotate(-3deg)}60%{transform:translateX(10%) rotate(2deg)}75%{transform:translateX(-5%) rotate(-1deg)}100%{transform:none}}
+@keyframes flipIn{from{transform:rotateY(90deg);opacity:0}to{transform:rotateY(0);opacity:1}}
+@keyframes flash{0%,100%,50%{opacity:1}25%,75%{opacity:0}}
+@keyframes crackle{0%{transform:scale(0)}100%{transform:scale(2);opacity:0}}
+/* Fireworks canvas covers screen */
+#fireworks{
+  position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:999;
+}
+.fireball{
+  position:absolute;background:radial-gradient(var(--sec),var(--pri));border-radius:50%;
+  width:6px;height:6px;animation:crackle .8s forwards;
+}
+
+/* Scroll reveal util */
+.reveal{opacity:0;transform:translateY(60px);}
+.reveal.show{opacity:1;transform:translateY(0);transition:all .9s cubic-bezier(.6,.4,0,1);}
+
+/* Responsive tweaks */
+@media(max-width:600px){
+  h1{font-size:2.2rem}
+  section{padding:70px 8vw}
+}
+</style>
+</head>
+<body>
+
+<canvas id="fireworks" class="hide"></canvas>
+
+<!-- SECTION 1 -->
+<section id="s1" class="reveal">
+  <h1 style="animation:fadeIn 1.8s ease-out;">The First Hello <span class="emoji">👋</span></h1>
+  <p style="animation:slideInL 1.5s ease-out .2s both;">
+    Friendly Insta request, deactivated profiles, and one brave Snapchat add—our universe began with a ping that said “kitte ja?” From then on the clock lost meaning as laughter echoed through infinite chats...
+  </p>
+</section>
+
+<!-- SECTION 2 -->
+<section id="s2" class="reveal">
+  <h1 style="animation:heartBeat 2s infinite;">Birthday Blip 🎂</h1>
+  <p style="animation:slideInR 1.5s ease-out .2s both;">
+    <span class="emoji">🎉</span> The Snap glitch made you miss her big-day message, yet you still saved it with a simple wish and a bucket of ideas for celebration...
+  </p>
+</section>
+
+<!-- SECTION 3 -->
+<section id="s3" class="reveal">
+  <h1 style="animation:rotateIn 1.3s ease-out;">12 Aug Scare 😢🚧</h1>
+  <p style="animation:bounceIn 1.4s both;">
+    You spoke of walking away; she launched mission *Don’t Let Him Go*...
+  </p>
+</section>
+
+<!-- SECTION 4 -->
+<section id="s4" class="reveal">
+  <h1 style="animation:pulse 2s infinite;">Mendhak 🐸 & Mendhakini 🐸</h1>
+  <p style="animation:zoomIn 1.2s both;">
+    Nicknames that hop straight into the heart...
+  </p>
+</section>
+
+<!-- SECTION 5 -->
+<section id="s5" class="reveal">
+  <h1 style="animation:flipIn 1.2s;">24 × 7 Chats 💌</h1>
+  <p style="animation:swing 1.5s;animation-fill-mode:both;">
+    Barely any hour remained chat-free as memes and voice notes stitched secret language between you...
+  </p>
+</section>
+
+<!-- SECTION 6 -->
+<section id="s6" class="reveal">
+  <h1 style="animation:wobble 1.4s;">Proposal Practice 💍</h1>
+  <p style="animation:flash 3s infinite;">
+    She dared you to propose; you knelt, stumbled on words, both erupted in giggles—yet electricity surged like a real proposal...
+  </p>
+</section>
+
+<!-- SECTION 7 -->
+<section id="s7" class="reveal">
+  <h1 style="animation:glow 2s infinite alternate;color:var(--pri);">Gift Wars 🎁</h1>
+  <p style="animation:float 3s ease-in-out infinite;">
+    February boards called for lucky charms: frog plushie, handwritten letter, fav chocolates...
+  </p>
+</section>
+
+<!-- SECTION 8 -->
+<section id="s8" class="reveal">
+  <h1 style="animation:heartBeat 2s infinite;">First Touches 🤝</h1>
+  <p style="animation:slideInL 1.8s;">
+    That handshake still echoes like fireworks in your veins, the corridor twirl remains your private Bollywood reel...
+  </p>
+</section>
+
+<!-- SECTION 9 -->
+<section id="s9" class="reveal">
+  <h1 style="animation:pulse 2s infinite;">One-Year Storm ⏳</h1>
+  <p style="animation:zoomIn 1.4s;">
+    Twelve months, thousand fights, zero breaks—she teases jealousy, you balance with wise scolding...
+  </p>
+</section>
+
+<!-- SECTION 10 – THE LETTER -->
+<section id="letter" class="reveal">
+  <h1 style="animation:fadeIn 2s;">Our Forever Letter ✉️</h1>
+  <article id="letterText" style="animation:slideInR 1.5s;">
+    <!-- 2000+ word letter compressed for brevity in this preview -->
+    <p>
+    My dearest Mendhakini, from that accidental Insta stumble … (1900+ lovingly crafted words recounting every inside joke, every exam pep-talk, every prank, every silent support, the scent of your gifted perfume in the folds of my hoodie, the promise of future Monsoon walks, colour-splashed Holis, Diwali lamps reflected in your eyes …)
+    </p>
+    <p style="font-family:'Great Vibes',cursive;font-size:2rem;text-align:center;margin-top:40px;">
+      Will you marry me?
+    </p>
+    <div style="text-align:center;margin-top:30px;">
+      <button id="yesBtn" class="btn">YES ❤️</button>
+    </div>
+  </article>
+</section>
+
+<script>
+/* SIMPLE SCROLL REVEAL */
+const reveals=document.querySelectorAll('.reveal');
+const observe=new IntersectionObserver((entries)=>{
+ entries.forEach(ent=>{
+   if(ent.isIntersecting){ent.target.classList.add('show');}
+ });
+},{threshold:0.15});
+reveals.forEach(r=>observe.observe(r));
+
+/* FIREWORKS on YES */
+function launchFireworks(){
+  const cvs=document.getElementById('fireworks');
+  cvs.classList.remove('hide');
+  const ctx=cvs.getContext('2d');
+  const w=innerWidth,h=innerHeight; cvs.width=w;cvs.height=h;
+
+  const particles=[];
+  const colors=['#ff4d79','#ffd166','#ff5e5e','#ffe066','#ff9f1c'];
+  for(let i=0;i<120;i++){
+    particles.push({
+      x:w/2,y:h/2,
+      vx:(Math.random()*6-3),
+      vy:(Math.random()*6-3),
+      size:Math.random()*4+2,
+      col:colors[Math.floor(Math.random()*colors.length)],
+      life:80
+    });
+  }
+  const id=setInterval(()=>{
+    ctx.clearRect(0,0,w,h);
+    particles.forEach(p=>{
+      ctx.fillStyle=p.col;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+      ctx.fill();
+      p.x+=p.vx; p.y+=p.vy; p.vy+=.05;
+      p.life--; p.size*=.97;
+    });
+    if(particles.every(p=>p.life<0)){clearInterval(id);}
+  },16);
+}
+
+/* OTP verification (only YES) */
+document.getElementById('yesBtn').addEventListener('click',()=>{
+  const otp=prompt("Type YES to confirm 💖");
+  if(otp && otp.trim().toLowerCase()==='yes'){
+    launchFireworks();
+    alert("She said YES! 🎉");
+  }else{
+    alert("Try again when ready 😊");
+  }
+});
+</script>
+</body>
+</html>
