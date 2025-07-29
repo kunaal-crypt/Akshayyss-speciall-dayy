@@ -2,121 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To My Arushi - My Fuggan 💌</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Love for You, Fuggan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #f3e6ff, #ffe6f0);
+      background: linear-gradient(to bottom right, #e9dff5, #f7f0ff);
       font-family: 'Poppins', sans-serif;
+      color: #333;
       overflow-x: hidden;
     }
-
-    .heart {
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+      position: relative;
+    }
+    h1 {
+      font-family: 'Parisienne', cursive;
+      font-size: 3em;
+      text-align: center;
+      color: #c44ec4;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 1.15em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .hearts {
       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .heart {
+      position: absolute;
       width: 20px;
       height: 20px;
-      background: url('https://i.imgur.com/QpYzD4y.png') no-repeat center center / contain;
-      animation: float 10s infinite ease-in-out;
-      z-index: 0;
-      opacity: 0.5;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 6s linear infinite;
     }
-
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
     @keyframes float {
       0% {
-        transform: translateY(100vh) translateX(0);
-        opacity: 0;
-      }
-      50% {
+        transform: translateY(0) rotate(45deg);
         opacity: 1;
       }
       100% {
-        transform: translateY(-10vh) translateX(30vw);
+        transform: translateY(-100vh) rotate(45deg);
         opacity: 0;
       }
-    }
-
-    .container {
-      max-width: 850px;
-      margin: 80px auto;
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 40px;
-      border-radius: 25px;
-      box-shadow: 0 0 25px rgba(200, 150, 255, 0.4);
-      position: relative;
-      z-index: 1;
-    }
-
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5em;
-      text-align: center;
-      color: #a64ca6;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-family: 'Parisienne', cursive;
-      font-size: 2em;
-      text-align: center;
-      margin-top: 0;
-      color: #ff80b3;
-    }
-
-    p {
-      font-size: 1.15em;
-      line-height: 1.9;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .signature {
-      text-align: right;
-      font-family: 'Great Vibes', cursive;
-      font-size: 2em;
-      color: #cc66ff;
-      margin-top: 40px;
-    }
-
-    .emoji {
-      font-size: 1.3em;
     }
   </style>
 </head>
 <body>
-
-  <!-- Floating hearts -->
-  <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
-  <div class="heart" style="left: 30%; animation-delay: 2s;"></div>
-  <div class="heart" style="left: 50%; animation-delay: 4s;"></div>
-  <div class="heart" style="left: 70%; animation-delay: 1s;"></div>
-  <div class="heart" style="left: 90%; animation-delay: 3s;"></div>
+  <div class="hearts">
+    <!-- Random floating hearts -->
+    <script>
+      for (let i = 0; i < 50; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = `${Math.random() * 100}%`;
+        heart.style.animationDuration = `${4 + Math.random() * 3}s`;
+        heart.style.opacity = Math.random();
+        document.querySelector('.hearts').appendChild(heart);
+      }
+    </script>
+  </div>
 
   <div class="container">
-    <h1>To My Arushi</h1>
-    <h2>My sweet Fuggan 🫶💜</h2>
+    <h1>My Love for You, Aru</h1>
 
-    <p>Arushi, tum meri life ka woh hissa ban gayi ho jiske bina har cheez adhoori lagti hai. Sab kuch simple ho jaata hai jab tum mere saath hoti ho.</p>
+    <p>From the very first moment we started talking, I knew there was something different about you, something pure, something real. Tumhari baaton mein ek aisi khushi thi jo dil ko chhoo jaati thi, aur aaj bhi har baar tumse baat karta hoon, dil wahi sukoon mehsoos karta hai.</p>
 
-    <p>Tumhare saath baat karna, tumhara muskurana, woh chhoti chhoti baatein... sab kuch itna natural aur real lagta hai. Tum ek comfort zone ban gayi ho jahan main hamesha safe mehsoos karta hoon. 🧸</p>
+    <p>Aru, main shayad likhne mein perfect na hoon, lekin jo mehsoos karta hoon woh har lafz mein utarna chahta hoon. You're not just a part of my day — you're the reason it becomes beautiful. When I wake up, the first thought is of your smile. When I sleep, the last feeling is your warmth.</p>
 
-    <p>Tumhare messages padke din better ho jaata hai. Tumhara gussa bhi cute lagta hai aur tumhari care toh bas sabse alag hai. Tum mein woh warmth hai jo har kisi mein nahi hoti. 🌷</p>
+    <p>Tumhari awaaz, tumhara hansna, tumhari shararat bhari baatein — sab kuch itna apna lagta hai. Jab tum thoda sa gussa karti ho na, woh bhi mujhe cute lagta hai. Mujhe lagta hai, duniya mein koi aur tumhari jagah nahi le sakta, aur lena bhi nahi chahiye.</p>
 
-    <p>Tum kabhi kabhi bolti ho na “main tumhe samajhti hoon,” toh ussi mein sab kuch chhupa hota hai. Mere liye tum sirf ek partner nahi, ek best friend bhi ho jisse main sab kuch share kar sakta hoon bina soche. 🫂</p>
+    <p>We’ve shared little fights, endless calls, random late-night confessions, aur woh chhoti-chhoti baatein jo sirf hum dono ke beech hoti hain. Kabhi kabhi lagta hai — kaise possible hai kisi se itna deeply connect kar paana? Lekin tum ho, toh sab possible lagta hai.</p>
 
-    <p>Kabhi kabhi sochta hoon, main itna lucky kaise ho gaya ki mujhe tum mili. Tumhara pyaar real hai, tumhari presence healing jaisi hai. Aur main chahta hoon ki yeh safar kabhi khatam na ho. ✨</p>
+    <p>Main janta hoon, har relation mein challenges hote hain. Aur humne bhi woh sab feel kiya hai. But we always come back — kyunki humara bond sirf love ka nahi, respect, patience aur care ka bhi hai. Tum meri life ka woh hissa ho jo har version mein important hai — khushiyon mein, lows mein, aur har beech wale pal mein.</p>
 
-    <p>Distance ho ya busy life, tum kabhi door nahi lagti. Tum mere din ka hissa ho, meri planning mein, meri baaton mein, meri har ek feeling mein. 💞</p>
+    <p>Fuggan, kabhi kabhi sochta hoon — agar tum nahi hoti, toh main kaise hota? Shayad ek blank page, jisme koi kahani nahi likhi gayi. Tum aayi aur meri zindagi ko ek kahani de gayi — har din nayi line, har pal naya emotion.</p>
 
-    <p>Tumhara naam lene se bhi ek smile aa jaati hai. Aur jab main “Aru” ya “Fuggan” kehta hoon, toh bas lagta hai main apna sabse special word use kar raha hoon. 🥺</p>
+    <p>I love how naturally you became my home. Tumse baat kiye bina din adhura lagta hai. Aur jab tum “I love you” bolti ho na, toh lagta hai duniya ki sabse best feeling mujhe mil gayi.</p>
 
-    <p>Tum perfect ho apne tareeke se. Mujhe tumse zyada kuch chahiye hi nahi. Main bas tumhe, tumhara pyaar, aur yeh rishta hamesha ke liye chahta hoon. 💘</p>
+    <p>Jab main kehata hoon “I love you”, usmein sirf teen shabd nahi hote. Usmein meri puri duniya hoti hai. Tumhare liye mera pyaar kisi poem ki tarah nahi, ek silent prayer ki tarah hai — har roz, har waqt, tumhare saath ke liye.</p>
 
-    <p>Thanks for being mine. For loving me the way no one ever did. For being Arushi — meri Arushi. 🫶</p>
+    <p>Main tumse perfect love story ka wada nahi karta. But main yeh zaroor kehta hoon — jitna ho sake, main tumhare saath rahunga. Tumhara support banunga, tumhari khushi mein khud ki khushi dhoondhunga.</p>
 
-    <div class="signature">Hamesha tumhara... 💖</div>
+    <p>Let's keep walking together, Aru — bina kisi fear ke, bina kisi pressure ke, sirf pyaar aur trust ke saath. Chahe jitne bhi ups and downs aayein, main tumhara haath nahi chhodunga.</p>
+
+    <p>Tum ho meri zindagi ki sabse khoobsurat feeling. Tumhari aankhon mein jo sapne hain, main unhe sach karna chahta hoon. Tumhare saath har subah, har shaam, ek nayi kahani likhni hai.</p>
+
+    <p>Bas itna hi kehna chahta hoon — I’m proud to be yours. I’m blessed that you’re mine. Aur har din tumse aur zyada pyaar hota ja raha hai.</p>
+
+    <p>Love you forever,</p>
+    <p><strong>Kunal ❤️</strong></p>
   </div>
 </body>
 </html>
