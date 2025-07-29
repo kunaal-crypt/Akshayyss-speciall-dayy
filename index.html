@@ -1,672 +1,94 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Our Magical Love Story | Mendhak & Mendhakini 🐸💖</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <!-- Google Fonts for a stylish look -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To My Fuggan 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #D67FFF;
-      --accent: #FFD166;
-      --background: #EAF6FF;
-      --text: #392467;
-      --header: #554994;
-      --section-bg: #fff9f5;
-      --shadow: 0 0 36px 2px rgba(178,116,255,0.09);
-      --border: #D3DBFF;
-    }
     body {
-      background: var(--background);
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: var(--text);
       margin: 0;
       padding: 0;
-      letter-spacing: 0.03em;
-      overflow-x: hidden;
+      background-color: #f3e8f9;
+      font-family: 'Cormorant Garamond', serif;
+      color: #4b2e5d;
+      line-height: 1.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #fff;
-      text-align: center;
-      padding: 2em 1em 1.5em;
+    .container {
+      max-width: 800px;
+      padding: 40px 30px;
+      background: #ffffffcc;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(180, 143, 204, 0.4);
+    }
+    h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 2.6rem;
-      letter-spacing: 0.08em;
-      box-shadow: var(--shadow);
-      border-bottom: 4px solid var(--accent);
-    }
-    main {
-      width: 100vw;
-      max-width: 650px;
-      margin: 0 auto 2em auto;
-      box-shadow: var(--shadow);
-    }
-    section {
-      background: var(--section-bg);
-      margin: 2em 1em;
-      border-radius: 25px;
-      box-shadow: 0 6px 26px 1px rgba(116,117,255,0.10);
-      padding: 2.1em 1.5em;
-      position: relative;
-      border: 2px solid var(--border);
-      transition: transform .33s cubic-bezier(.5,2,0,1);
-    }
-    section:hover { transform: scale(1.018) rotate(-0.3deg);}
-    h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2rem;
-      color: var(--header);
-      margin-bottom: 1em;
-      text-shadow: 0 2px 12px #fff5, 0 1px 2px #0001;
-      letter-spacing: .07em;
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #8b3fa3;
     }
     p {
-      font-size: 1.06rem;
-      color: var(--text);
-      line-height: 1.76;
-      margin-bottom: 1.07em;
+      font-size: 20px;
+      margin-bottom: 20px;
     }
-    .emoji {
-      font-size: 1.5em;
-      vertical-align: baseline;
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        font-size: 18px;
+      }
     }
-    /* Animations (20+ visible unique uses) */
-    .fade-in {animation: fadeIn 1.3s;}
-    .slide-in-left {animation: slideInLeft 1.33s;}
-    .slide-in-up {animation: slideInUp 1.51s;}
-    .slide-in-right {animation: slideInRight 1.41s;}
-    .zoom-in {animation:zoomIn 1.44s;}
-    .bounce-in {animation: bounceIn 1.18s;}
-    .wobble {animation: wobble 1.52s;}
-    .pulse {animation: pulse 1.21s infinite;}
-    .swing {animation: swing 1.9s 1;}
-    .flip-in {animation: flipInX .93s;}
-    .rot-in {animation: rotateIn 1.23s;}
-    .flash {animation: flash 2.35s infinite;}
-    .pop {animation: popIn 1.14s;}
-    .heart-beat {animation: heartBeat 1.33s infinite;}
-    .glow {animation: glow 1.4s infinite alternate;}
-    .corridor-spin {animation: corridorSpin 2.1s;}
-    .fire-twirl {animation: fireTwirl 1.37s;}
-    .reveal {
-      opacity: 0;
-      filter: blur(7px);
-      transition: 0.9s cubic-bezier(.2, .9, .5, 1.17);
-      transform: translateY(60px) scale(.98);
-    }
-    .reveal.visible {
-      opacity:1;
-      filter:blur(0);
-      transform: translateY(0) scale(1);
-    }
-    /* Keyframes */
-    @keyframes fadeIn {from{opacity:0}to{opacity:1}}
-    @keyframes slideInLeft {from{transform:translateX(-55vw);} to{transform:translateX(0);}}
-    @keyframes slideInRight {from{transform:translateX(55vw);} to{transform:translateX(0);}}
-    @keyframes slideInUp {from{transform:translateY(80px);opacity:0}to{transform:translateY(0);opacity:1}}
-    @keyframes zoomIn {from{transform:scale(.44);opacity:0}to{transform:scale(1);opacity:1}}
-    @keyframes bounceIn {from{transform:scale(.71);opacity:0}70%{transform:scale(1.11);opacity:.5}to{transform:scale(1);opacity:1}}
-    @keyframes wobble {0%{transform:none}15%{transform:translateX(-14%) rotate(-7deg)}30%{transform:translateX(10%) rotate(3deg)}45%{transform:translateX(-7%) rotate(-3deg)}60%{transform:translateX(6%) rotate(2deg)}75%{transform:translateX(-3%) rotate(-1deg)}100%{transform:none}}
-    @keyframes pulse {0%{transform:scale(1);} 50%{transform:scale(1.08);} 100%{transform:scale(1);}}
-    @keyframes swing {20%{transform:rotate(16deg);} 40%{transform:rotate(-10deg);} 60%{transform:rotate(6deg);} 80%{transform:rotate(-4deg);} 100%{transform:rotate(0deg);}}
-    @keyframes flipInX {from{transform:perspective(400px) rotateX(90deg)}to{transform:perspective(400px) rotateX(0deg)}}
-    @keyframes rotateIn {from{transform:rotate(-180deg);opacity:0}to{transform:rotate(0);opacity:1}}
-    @keyframes flash {0%,100%,50%{opacity:1}25%,75%{opacity:0}}
-    @keyframes popIn {0%{opacity:0;transform:scale(.6)}80%{transform:scale(1.14)}100%{opacity:1;transform:scale(1)}}
-    @keyframes heartBeat {0%,100%{transform:scale(1)}30%,50%,70%{transform:scale(1.14)}40%,60%{transform:scale(.94)}}
-    @keyframes glow {from{box-shadow:0 0 2px #ff96c0;}to{box-shadow:0 0 14px 4px #ff61b7b0;}}
-    @keyframes corridorSpin {from{transform:rotate(0);opacity:0}80%{transform:rotate(345deg);opacity:1}to{transform:rotate(360deg);opacity:1}}
-    @keyframes fireTwirl {from{transform:rotate(-50deg) scale(.6);opacity:.23}to{transform:rotate(0) scale(1.07);opacity:1}}
-    /* Fireworks . . . (canvas) */
-    #fireworks-canvas {
-      display: none;
-      position: fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:999;
-      transition:opacity .6s;
-    }
-    /* Marry Me Styling */
-    .marry-title {
-      font-family:'Great Vibes',cursive;
-      font-size:2.3rem;
-      text-align:center;
-      margin-top:2em;
-      color:var(--primary);
-      letter-spacing:.12em;
-      animation: glow 2s infinite alternate;
-    }
-    .yes-button {
-      background: linear-gradient(135deg,#ff3f80,#ffdb6e 88%);
-      border:none;
-      color:#fff;
-      font-size:1.6rem;
-      border-radius:42px;
-      font-family: 'Dancing Script',cursive;
-      box-shadow:0 3px 12px #ffd166bb;
-      padding: .75em 2.9em;
-      margin:2.8em auto 1em;
-      outline: none;
-      display: block;
-      cursor: pointer;
-      animation: popIn 2s;
-      transition: background .3s, box-shadow .2s, transform .2s;
-    }
-    .yes-button.clicked { background: #fff; color: #ff3f80; animation:heartBeat 1.2s }
-    @media(max-width: 600px) {
-      section {margin: 1.1em .09em;}
-      h2 {font-size:1.16em;}
-      .marry-title {font-size:1.3em;}
-    }
-    ::selection{ background: #ffb7ed77; }
   </style>
 </head>
 <body>
-<header>
-  Mendhak & Mendhakini<br>
-  <span style="font-size:1.19rem;font-family:'Montserrat',sans-serif;">Our Magical 1-Year Story ✨</span>
-</header>
-<canvas id="fireworks-canvas"></canvas>
-<main>
-  <!-- 1 -->
-  <section class="reveal fade-in">
-    <h2 class="slide-in-left">The First Hello <span class="emoji">👋🐸</span></h2>
+  <div class="container">
+    <h1>To My Dearest Fuggan 🕊️</h1>
     <p>
-      Sometimes, a love story doesn’t start with roses and chocolates, but with a friendship request cause of a deactivated account. Our journey began in the most unpredictable way—your cheeky “Bahana: Yash bhaiya ki ID chahiye” and her secret giggle, hunting your account to drop a Snap request when my Insta was lost. The courage it took! Then i sent a snap of mine and she replied ( kitte ja rhe ho) ,The laughs tumbled in that single message, and suddenly, the nights were filled with 3am texts and stolen giggles. Out of nowhere, life started swirling with new dreams, her laughter echoing in my mind even when the phone was silent.
+      Arushi, my sweet Aru, my Fuggan... I don’t even know how to begin this letter, because putting into words what you mean to me feels like trying to capture the sky in a jar. But I’ll try. Because you deserve every word, every feeling, every heartbeat that this letter carries.
     </p>
-    <p class="wobble">
-      She was far—sometimes just a photo, sometimes a long chat. Yet, every time her name popped up, a smile filled my face. Somehow, from the first meme to the last “goodnight,” something much bigger was quietly blooming. In a world full of billions, you’d found your impossible coincidence… your new start. <span class="emoji">💭💕</span>
-    </p>
-  </section>
-  <!-- 2 -->
-  <section class="reveal slide-in-right">
-    <h2 class="bounce-in">Birthday Blip <span class="emoji">🎂🎈</span></h2>
     <p>
-      Birthdays are supposed to be perfect, right? But real moments are made in the imperfections. Her big day—her smile, your nervous plan to make it unforgettable. And fate: a Snap message floating in cyberspace, the moment missed. she woke up disappointed, heart heavy but intent clear. “Happy Birthday,” I said anyway, your wish simple but true. I spent all day making up for it—inventing “advance wishes,” sharing silly plans and secret hopes for every 6 August to come, all in  text, and the softest feelings.
+      From the very first time we spoke on 15 April, I felt something shift inside me. There was a strange comfort in your voice, a softness in your words that felt like home. I remember the way I couldn’t stop smiling after our first call — like something rare had just entered my life. And then, by the 17th, it was no longer a feeling... it was a truth. I loved you.
     </p>
-    <p class="heart-beat">
-      That day, you learned that loving someone isn’t about always doing it right, but always trying again—for them. Because every smile you can bring to her face is worth the wait. <span class="emoji">🎁🌈</span>
-    </p>
-  </section>
-  <!-- 3 -->
-  <section class="reveal zoom-in">
-    <h2 class="glow">August’s Test <span class="emoji">🤧🌀</span></h2>
     <p>
-      August 12th came. What felt like an ordinary day unfolded all of love’s hardest lessons. I decided to talk about going away—testing how strong “us” really was. She fought for you, heart and soul: pleading, reasoning, even teasing, every trick used to keep you from vanishing out of her world. “Don’t go”—two words, but how they trembled. But i, stubborn as i was, gave nothing but empty excuses, masking mine truest fear: losing her too.
+      Loving you has been the most honest thing I’ve ever done. It’s like breathing — unconscious, essential, effortless. You call me Nishu, and every time I hear that name in your voice, my heart melts. That name feels like it belongs to someone lucky, someone chosen — and that someone is me.
     </p>
-    <p class="swing">
-      You left with a single promise: “I’ll be back in October.” A thousand arguments later, you both knew no distance, no fight, could break you. It’s the day you both realized you were not just chatting—you were actually living for each other. <span class="emoji">🫂💘</span>
-    </p>
-  </section>
-  <!-- 4 -->
-  <section class="reveal flip-in">
-    <h2 class="slide-in-left">Nicknames & Mendhaks <span class="emoji">🐸💚</span></h2>
     <p>
-      If soulmates have secret languages, her is “Mendhak.” That nickname—her favorite—became our magical bond. I grinned, threw back “Mendhakini,” and soon a whole world of frog emojis, silly stickers, and adorable teases flooded our chats. It’s more than a joke. It’s our special code: whenever she calls you “mendhak,” no matter how long the day, I snap right back to happiness. 
+      We’ve laughed, we’ve fought, we’ve cried. We’ve been silly, stubborn, silent, and soft. And yet, every phase, every emotion, every flaw — we carried it together. We didn’t run from the ugly parts. We stayed. We grew. And that’s love, isn’t it? Real love isn’t perfect. It’s patient. It listens. It forgives. And you’ve taught me all of that.
     </p>
-    <p class="rot-in">
-      Maybe nobody else gets it, but that’s how love goes—it makes nonsense out of reality and reality out of nonsense! The world can drown in noise; your melody is secret and soft, but more beautiful than any song. <span class="emoji">🧸😂</span>
-    </p>
-  </section>
-  <!-- 5 -->
-  <section class="reveal corridor-spin">
-    <h2 class="pop">Endless Talking <span class="emoji">📱🫧</span></h2>
     <p>
-      Chat after chat, day rolled into night, and weeks disappeared. we talked about everything—exams, movies, teachers, silly dreams, and even silliest fears. Some texts were short: “ kitna Sote ho mendhak ?” “uthh bhi jaao " Others went on for essays-worth. Fights happened over toppings on pizza, over movie spoilers, or what makes the best meme. But after every fight, there was always a soft “sorry” or a stubborn silent truce that lasted precisely until you both started missing each other too much.  
+      There are nights I lie awake thinking about how far we’ve come. From strangers to soulmates. From “Hi” to “I can’t live without you.” And I promise you, Fuggan, this isn’t just a phase. You’re not just a moment in my life — you are my life.
     </p>
-    <p class="flash">
-      we learned what matters: never giving up, no matter how silly the argument. The superpower of our relationship is that we're  both too stubborn to let love lose. <span class="emoji">❤️🦸‍♂️</span>
-    </p>
-  </section>
-  <!-- 6 -->
-  <section class="reveal fire-twirl">
-    <h2 class="slide-in-up">Practice Proposals <span class="emoji">🙈👑</span></h2>
     <p>
-      “Propose to me face-to-face,” she dared you one day—expecting Bollywood drama and maybe some awkwardness. You took a breath and, with trembling hands, went for it. Laughter and blushes everywhere! Even though your performance wasn’t Oscar-worthy, it became a moment etched into both our memories forever.
+      I’ve seen you happy, I’ve seen you tired, I’ve seen you mad, and I’ve seen you broken. And through it all, I’ve fallen more in love with your soul. You’re not just beautiful on the outside — you’re beautiful in your anger, your overthinking, your deep love, and your little tantrums. I adore every version of you. Even the dramatic one 😅
     </p>
-    <p class="pulse">
-      That’s the thing about proposals—the words might be jumbled, the pose a little goofy, but what matters is the feeling. After all, it’s easy to act in movies. Only love makes you want the outtakes. <span class="emoji">😍📹</span>
-    </p>
-  </section>
-  <!-- 7 -->
-  <section class="reveal bounce-in">
-    <h2 class="slide-in-right">Gift Wars <span class="emoji">🎁🍫</span></h2>
     <p>
-      When her board exams came, you wanted to be her luck. Out came the most genuine gifts: a “mendhak” plushie, a handwritten letter sealed with dreams, her favorite chocolates, love hidden in every wrapper. You picked every piece with care—hope mixed with sweetness, a soft frog pouch to cuddle when you’re not around.
+      I know sometimes I mess up. I know I’ve hurt you unintentionally. I’m sorry for every moment that made your heart feel heavy. But I also want you to know — I never took your love for granted. Every “I love you” from you is like a prayer answered. Every second you stay with me is a blessing I whisper thank you for.
     </p>
-    <p class="flip-in">
-      Then came her return: the perfume you guard like a treasure, saved only for the extra special days. Those gifts lie in your room now, like time-capsules—physical proof that our love story is a gallery, and every present is a frame. <span class="emoji">🎀📝</span>
-    </p>
-  </section>
-  <!-- 8 -->
-  <section class="reveal slide-in-up">
-    <h2 class="zoom-in">First Real Touch <span class="emoji">🤝✨</span></h2>
     <p>
-      Chatting is sweet, but the first real handshake? Unforgettable. Nervous grins. Shaky hands. Electricity sparking down our arms. In a crowded corridor, everyone disappeared except we two, twirling, laughing—doing your private Bollywood scene. Even now, thinking of that touch makes your heart do a little somersault.
+      I think about our future a lot. Waking up next to you. Fighting over who gets the blanket. Cooking together (or ordering because we’re lazy 😜). Holding your hand during drives. Hugging you when you’ve had a rough day. Celebrating your small wins. Raising a home filled with laughter, comfort, and peace. That’s what I dream of.
     </p>
-    <p class="heart-beat">
-      If moments could last forever, I had live in that corridor spin. One touch was enough to tell both our souls: this isn’t ordinary. <span class="emoji">💖😳</span>
-    </p>
-  </section>
-  <!-- 9 -->
-  <section class="reveal slide-in-left">
-    <h2 class="corridor-spin">One Year, Many Fights <span class="emoji">⏳🔥</span></h2>
     <p>
-      One year. 365 days. Countless “I miss you.” Fights, but also laughter. Tears, but also healing hugs. Each quarrel was proof of how much you care; each apology was a stepping stone to becoming better, together. You’ve learned her favorite songs (“Tu Hi Haqeeqat” running in the background), discovered how beautiful she looks in pink, and most importantly: that forgiveness and growth are partners in every real relationship.
+      People wait a lifetime to find what I found in you. I don’t want fancy dates or cinematic love stories. I want us. The raw, the messy, the real. I want your sleepy voice in the morning. Your overthinking rants at midnight. Your smile when you see me on video call. That’s the heaven I want to live in.
     </p>
-    <p class="swing">
-      In this year, i haven’t just loved; i have evolved. Her mischief keeps things lively, your patience keeps things calm. She drives you wild and keeps you sane—all at once. And that’s the magic of “us.” <span class="emoji">💞😇</span>
-    </p>
-  </section>
-  <!-- 10 - LOVE LETTER -->
-  <section class="reveal zoom-in" id="love-letter">
-    <h2 class="marry-title">My Forever Letter 💌</h2>
-    <p style="font-family:'Dancing Script',cursive;font-size:1.21rem;color:#9a39b6;line-height:2;">
-      My beloved Mendhakini,<br><br>
-      Today, as we reach this beautiful milestone—one year of togetherness—I want to put every emotion, every memory, and every heartbeat on paper. From the first message to this very moment, I have loved you in ways words often fail to capture, but I will try.<br><br>
-      Our love story is not just a tale of two people—it's the universe conspiring against the odds, rewriting destiny for the two of us. Remember how shy you were to send that Snap request? How I nervously crafted every reply, hoping you'd laugh at my jokes or blush at my compliments? Those late-night endless chats, the “kitte ja rhe ho ” that began it all—it was as if our souls had already decided, years ago, that we were made for each other.<br><br>
-      Every day, your voice in the form of text is my favorite music. Every smile you send lights up the darkest of my hours. Life before you was a static grayscale—since you walked in, every day is a Holi of wild colors.<br><br>
-      I adore your laughter, the way you mischievously tease me, how your nose wrinkles when you're mad, and the way your “mendhak!” makes me grin no matter what. Our fights make us stronger; our apologies, more loving. I cherish the way we argue over silly things—it’s proof of our honesty and passion. In one year, we have built a bond that no distance, no doubt, could break.<br><br>
-      Your presence calms me; your absence teaches me the meaning of longing. When I scold you, it’s not to hurt, but to help—because I care more than I can ever say. I know my anger may worry you, but it’s only because I want the best for you, for us. You’ve taught me patience, forgiveness, and what it means to grow together. Our journey hasn't always been easy, but I wouldn't trade a single second of it for the world.<br><br>
-      I still remember your birthday, how you missed the message. Each gift—your chocolates, my mendhak plushie, your perfume—are bookmarks in our story, chapters I read over and over in my heart. I treasure our first handshake, the way time froze for a second. I couldn’t breathe, couldn’t think—my whole world was standing there, holding my hand.<br><br>
-      I love the way you look in pink (it really is your color!); I love your stubborn independence and your gentle vulnerability. I adore the way you make even the most ordinary days feel magical. Our inside jokes, secret nicknames, your “badmaashi”—they are the glue that keeps our story unique. When the world confuses or challenges us, our love is the answer. No matter how much you tease or annoy me (and you never stop!), I know I’d miss every bit of it if you changed.<br><br>
-      Today, I promise you: I’ll always try to be the best partner, to correct and support, to learn and grow, and most importantly—to never give up on us, no matter what. This year, I have realized what matters most is not being right, but being there. I love every bit of you, your strengths and your flaws, your joys and your storms.<br><br>
-      Here’s to all the moments behind us, and to all the beautiful tomorrows ahead. Here’s to movie nights, cringey dance sessions, surprise gifts, and endless phone calls. Here’s to the fights that end in hugs and the dreams we have yet to live.<br><br>
-      I love you truly, madly, deeply… for a thousand lifetimes more.<br><br>
-      <span style="display:block;font-family:'Great Vibes',cursive;font-size:2em;text-align:center;color:#ff43a6;margin-top:1em;">Will you marry me?</span>
-      <button class="yes-button" id="yes-btn">YES ❤️</button>
-    </p>
-  </section>
-</main>
-<script>
-  // Reveal sections on scroll
-  const allSections = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
-  }, {threshold:0.15});
-  allSections.forEach(sec=>obs.observe(sec));
-
-  // Fireworks on YES
-  let fired = false;
-  document.getElementById('yes-btn').onclick = function(){
-    if(fired) return;
-    let otp = prompt("Type YES to confirm your answer:");
-    if(!otp) return;
-    if(otp.trim().toLowerCase() !== 'yes') { alert("Type YES (case-insensitive) to proceed!"); return; }
-    fired = true;
-    this.classList.add("clicked");
-    setTimeout(()=>showFirework(),400);
-  }
-  function showFirework(){
-    const cvs = document.getElementById('fireworks-canvas');
-    cvs.width = window.innerWidth; cvs.height = window.innerHeight;
-    cvs.style.display = 'block'; cvs.style.opacity="1";
-    const ctx = cvs.getContext('2d');
-    function randomColor(){
-      const c=['#ff71b7', '#ffd166', '#bb87ff','#7de0d3','#fda94f','#fff946','#ff6a88','#d06eee'];
-      return c[~~(Math.random()*c.length)];
-    }
-    function firework(){
-      for(let c = 0; c < 18; c++){
-        let angle = (2 * Math.PI * c) / 18;
-        let radius = Math.random() * 80 + 60, len = 0;
-        let xc = cvs.width/2, yc=cvs.height*.65;
-        let col = randomColor();
-        let d=0;
-        function animate(){
-          ctx.beginPath();
-          ctx.arc(xc+Math.cos(angle)*len, yc+Math.sin(angle)*len, 7+d/7, 0, 2*Math.PI);
-          ctx.fillStyle=col; ctx.globalAlpha=(1-d/30);
-          ctx.fill();
-          len += 5.6+.1*d;
-          d++;
-          if(d<32)requestAnimationFrame(animate);
-        }
-        animate();
-      }
-    }
-    firework();
-    setTimeout(()=>{cvs.style.opacity="0";}, 3200);
-    setTimeout(()=>{cvs.style.display="none";},3700);
-  }
-</script>
-</body>
-</html>
-!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Our Magical Love Story | Mendhak & Mendhakini 🐸💖</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <!-- Google Fonts for a stylish look -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #D67FFF;
-      --accent: #FFD166;
-      --background: #EAF6FF;
-      --text: #392467;
-      --header: #554994;
-      --section-bg: #fff9f5;
-      --shadow: 0 0 36px 2px rgba(178,116,255,0.09);
-      --border: #D3DBFF;
-    }
-    body {
-      background: var(--background);
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: var(--text);
-      margin: 0;
-      padding: 0;
-      letter-spacing: 0.03em;
-      overflow-x: hidden;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #fff;
-      text-align: center;
-      padding: 2em 1em 1.5em;
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.6rem;
-      letter-spacing: 0.08em;
-      box-shadow: var(--shadow);
-      border-bottom: 4px solid var(--accent);
-    }
-    main {
-      width: 100vw;
-      max-width: 650px;
-      margin: 0 auto 2em auto;
-      box-shadow: var(--shadow);
-    }
-    section {
-      background: var(--section-bg);
-      margin: 2em 1em;
-      border-radius: 25px;
-      box-shadow: 0 6px 26px 1px rgba(116,117,255,0.10);
-      padding: 2.1em 1.5em;
-      position: relative;
-      border: 2px solid var(--border);
-      transition: transform .33s cubic-bezier(.5,2,0,1);
-    }
-    section:hover { transform: scale(1.018) rotate(-0.3deg);}
-    h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2rem;
-      color: var(--header);
-      margin-bottom: 1em;
-      text-shadow: 0 2px 12px #fff5, 0 1px 2px #0001;
-      letter-spacing: .07em;
-    }
-    p {
-      font-size: 1.06rem;
-      color: var(--text);
-      line-height: 1.76;
-      margin-bottom: 1.07em;
-    }
-    .emoji {
-      font-size: 1.5em;
-      vertical-align: baseline;
-    }
-    /* Animations (20+ visible unique uses) */
-    .fade-in {animation: fadeIn 1.3s;}
-    .slide-in-left {animation: slideInLeft 1.33s;}
-    .slide-in-up {animation: slideInUp 1.51s;}
-    .slide-in-right {animation: slideInRight 1.41s;}
-    .zoom-in {animation:zoomIn 1.44s;}
-    .bounce-in {animation: bounceIn 1.18s;}
-    .wobble {animation: wobble 1.52s;}
-    .pulse {animation: pulse 1.21s infinite;}
-    .swing {animation: swing 1.9s 1;}
-    .flip-in {animation: flipInX .93s;}
-    .rot-in {animation: rotateIn 1.23s;}
-    .flash {animation: flash 2.35s infinite;}
-    .pop {animation: popIn 1.14s;}
-    .heart-beat {animation: heartBeat 1.33s infinite;}
-    .glow {animation: glow 1.4s infinite alternate;}
-    .corridor-spin {animation: corridorSpin 2.1s;}
-    .fire-twirl {animation: fireTwirl 1.37s;}
-    .reveal {
-      opacity: 0;
-      filter: blur(7px);
-      transition: 0.9s cubic-bezier(.2, .9, .5, 1.17);
-      transform: translateY(60px) scale(.98);
-    }
-    .reveal.visible {
-      opacity:1;
-      filter:blur(0);
-      transform: translateY(0) scale(1);
-    }
-    /* Keyframes */
-    @keyframes fadeIn {from{opacity:0}to{opacity:1}}
-    @keyframes slideInLeft {from{transform:translateX(-55vw);} to{transform:translateX(0);}}
-    @keyframes slideInRight {from{transform:translateX(55vw);} to{transform:translateX(0);}}
-    @keyframes slideInUp {from{transform:translateY(80px);opacity:0}to{transform:translateY(0);opacity:1}}
-    @keyframes zoomIn {from{transform:scale(.44);opacity:0}to{transform:scale(1);opacity:1}}
-    @keyframes bounceIn {from{transform:scale(.71);opacity:0}70%{transform:scale(1.11);opacity:.5}to{transform:scale(1);opacity:1}}
-    @keyframes wobble {0%{transform:none}15%{transform:translateX(-14%) rotate(-7deg)}30%{transform:translateX(10%) rotate(3deg)}45%{transform:translateX(-7%) rotate(-3deg)}60%{transform:translateX(6%) rotate(2deg)}75%{transform:translateX(-3%) rotate(-1deg)}100%{transform:none}}
-    @keyframes pulse {0%{transform:scale(1);} 50%{transform:scale(1.08);} 100%{transform:scale(1);}}
-    @keyframes swing {20%{transform:rotate(16deg);} 40%{transform:rotate(-10deg);} 60%{transform:rotate(6deg);} 80%{transform:rotate(-4deg);} 100%{transform:rotate(0deg);}}
-    @keyframes flipInX {from{transform:perspective(400px) rotateX(90deg)}to{transform:perspective(400px) rotateX(0deg)}}
-    @keyframes rotateIn {from{transform:rotate(-180deg);opacity:0}to{transform:rotate(0);opacity:1}}
-    @keyframes flash {0%,100%,50%{opacity:1}25%,75%{opacity:0}}
-    @keyframes popIn {0%{opacity:0;transform:scale(.6)}80%{transform:scale(1.14)}100%{opacity:1;transform:scale(1)}}
-    @keyframes heartBeat {0%,100%{transform:scale(1)}30%,50%,70%{transform:scale(1.14)}40%,60%{transform:scale(.94)}}
-    @keyframes glow {from{box-shadow:0 0 2px #ff96c0;}to{box-shadow:0 0 14px 4px #ff61b7b0;}}
-    @keyframes corridorSpin {from{transform:rotate(0);opacity:0}80%{transform:rotate(345deg);opacity:1}to{transform:rotate(360deg);opacity:1}}
-    @keyframes fireTwirl {from{transform:rotate(-50deg) scale(.6);opacity:.23}to{transform:rotate(0) scale(1.07);opacity:1}}
-    /* Fireworks . . . (canvas) */
-    #fireworks-canvas {
-      display: none;
-      position: fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:999;
-      transition:opacity .6s;
-    }
-    /* Marry Me Styling */
-    .marry-title {
-      font-family:'Great Vibes',cursive;
-      font-size:2.3rem;
-      text-align:center;
-      margin-top:2em;
-      color:var(--primary);
-      letter-spacing:.12em;
-      animation: glow 2s infinite alternate;
-    }
-    .yes-button {
-      background: linear-gradient(135deg,#ff3f80,#ffdb6e 88%);
-      border:none;
-      color:#fff;
-      font-size:1.6rem;
-      border-radius:42px;
-      font-family: 'Dancing Script',cursive;
-      box-shadow:0 3px 12px #ffd166bb;
-      padding: .75em 2.9em;
-      margin:2.8em auto 1em;
-      outline: none;
-      display: block;
-      cursor: pointer;
-      animation: popIn 2s;
-      transition: background .3s, box-shadow .2s, transform .2s;
-    }
-    .yes-button.clicked { background: #fff; color: #ff3f80; animation:heartBeat 1.2s }
-    @media(max-width: 600px) {
-      section {margin: 1.1em .09em;}
-      h2 {font-size:1.16em;}
-      .marry-title {font-size:1.3em;}
-    }
-    ::selection{ background: #ffb7ed77; }
-  </style>
-</head>
-<body>
-<header>
-  Mendhak & Mendhakini<br>
-  <span style="font-size:1.19rem;font-family:'Montserrat',sans-serif;">Our Magical 1-Year Story ✨</span>
-</header>
-<canvas id="fireworks-canvas"></canvas>
-<main>
-  <!-- 1 -->
-  <section class="reveal fade-in">
-    <h2 class="slide-in-left">The First Hello <span class="emoji">👋🐸</span></h2>
     <p>
-      Sometimes, a love story doesn’t start with roses and chocolates, but with a friendship request cause of a deactivated account. Our journey began in the most unpredictable way—your cheeky “Bahana: Yash bhaiya ki ID chahiye” and her secret giggle, hunting your account to drop a Snap request when my Insta was lost. The courage it took! Then i sent a snap of mine and she replied ( kitte ja rhe ho) ,The laughs tumbled in that single message, and suddenly, the nights were filled with 3am texts and stolen giggles. Out of nowhere, life started swirling with new dreams, her laughter echoing in my mind even when the phone was silent.
+      You, Arushi, are the softness in my storm. The calm in my chaos. The home I never knew I needed. And no matter what the world throws at us, I promise I’ll choose you — every single time. Even on the hard days. Especially on the hard days.
     </p>
-    <p class="wobble">
-      She was far—sometimes just a photo, sometimes a long chat. Yet, every time her name popped up, a smile filled my face. Somehow, from the first meme to the last “goodnight,” something much bigger was quietly blooming. In a world full of billions, you’d found your impossible coincidence… your new start. <span class="emoji">💭💕</span>
-    </p>
-  </section>
-  <!-- 2 -->
-  <section class="reveal slide-in-right">
-    <h2 class="bounce-in">Birthday Blip <span class="emoji">🎂🎈</span></h2>
     <p>
-      Birthdays are supposed to be perfect, right? But real moments are made in the imperfections. Her big day—her smile, your nervous plan to make it unforgettable. And fate: a Snap message floating in cyberspace, the moment missed. she woke up disappointed, heart heavy but intent clear. “Happy Birthday,” I said anyway, your wish simple but true. I spent all day making up for it—inventing “advance wishes,” sharing silly plans and secret hopes for every 6 August to come, all in  text, and the softest feelings.
+      Thank you for choosing me. For loving me. For staying even when it wasn’t easy. I don’t know how this world gave me someone like you — but I promise, with every breath in me, I’ll protect your heart and hold your hand till the end of time.
     </p>
-    <p class="heart-beat">
-      That day, you learned that loving someone isn’t about always doing it right, but always trying again—for them. Because every smile you can bring to her face is worth the wait. <span class="emoji">🎁🌈</span>
-    </p>
-  </section>
-  <!-- 3 -->
-  <section class="reveal zoom-in">
-    <h2 class="glow">August’s Test <span class="emoji">🤧🌀</span></h2>
     <p>
-      August 12th came. What felt like an ordinary day unfolded all of love’s hardest lessons. I decided to talk about going away—testing how strong “us” really was. She fought for you, heart and soul: pleading, reasoning, even teasing, every trick used to keep you from vanishing out of her world. “Don’t go”—two words, but how they trembled. But i, stubborn as i was, gave nothing but empty excuses, masking mine truest fear: losing her too.
+      Forever yours,<br/>
+      <strong>Nishu 💗</strong>
     </p>
-    <p class="swing">
-      You left with a single promise: “I’ll be back in October.” A thousand arguments later, you both knew no distance, no fight, could break you. It’s the day you both realized you were not just chatting—you were actually living for each other. <span class="emoji">🫂💘</span>
-    </p>
-  </section>
-  <!-- 4 -->
-  <section class="reveal flip-in">
-    <h2 class="slide-in-left">Nicknames & Mendhaks <span class="emoji">🐸💚</span></h2>
-    <p>
-      If soulmates have secret languages, her is “Mendhak.” That nickname—her favorite—became our magical bond. I grinned, threw back “Mendhakini,” and soon a whole world of frog emojis, silly stickers, and adorable teases flooded our chats. It’s more than a joke. It’s our special code: whenever she calls you “mendhak,” no matter how long the day, I snap right back to happiness. 
-    </p>
-    <p class="rot-in">
-      Maybe nobody else gets it, but that’s how love goes—it makes nonsense out of reality and reality out of nonsense! The world can drown in noise; your melody is secret and soft, but more beautiful than any song. <span class="emoji">🧸😂</span>
-    </p>
-  </section>
-  <!-- 5 -->
-  <section class="reveal corridor-spin">
-    <h2 class="pop">Endless Talking <span class="emoji">📱🫧</span></h2>
-    <p>
-      Chat after chat, day rolled into night, and weeks disappeared. we talked about everything—exams, movies, teachers, silly dreams, and even silliest fears. Some texts were short: “ kitna Sote ho mendhak ?” “uthh bhi jaao " Others went on for essays-worth. Fights happened over toppings on pizza, over movie spoilers, or what makes the best meme. But after every fight, there was always a soft “sorry” or a stubborn silent truce that lasted precisely until you both started missing each other too much.  
-    </p>
-    <p class="flash">
-      we learned what matters: never giving up, no matter how silly the argument. The superpower of our relationship is that we're  both too stubborn to let love lose. <span class="emoji">❤️🦸‍♂️</span>
-    </p>
-  </section>
-  <!-- 6 -->
-  <section class="reveal fire-twirl">
-    <h2 class="slide-in-up">Practice Proposals <span class="emoji">🙈👑</span></h2>
-    <p>
-      “Propose to me face-to-face,” she dared you one day—expecting Bollywood drama and maybe some awkwardness. You took a breath and, with trembling hands, went for it. Laughter and blushes everywhere! Even though your performance wasn’t Oscar-worthy, it became a moment etched into both our memories forever.
-    </p>
-    <p class="pulse">
-      That’s the thing about proposals—the words might be jumbled, the pose a little goofy, but what matters is the feeling. After all, it’s easy to act in movies. Only love makes you want the outtakes. <span class="emoji">😍📹</span>
-    </p>
-  </section>
-  <!-- 7 -->
-  <section class="reveal bounce-in">
-    <h2 class="slide-in-right">Gift Wars <span class="emoji">🎁🍫</span></h2>
-    <p>
-      When her board exams came, you wanted to be her luck. Out came the most genuine gifts: a “mendhak” plushie, a handwritten letter sealed with dreams, her favorite chocolates, love hidden in every wrapper. You picked every piece with care—hope mixed with sweetness, a soft frog pouch to cuddle when you’re not around.
-    </p>
-    <p class="flip-in">
-      Then came her return: the perfume you guard like a treasure, saved only for the extra special days. Those gifts lie in your room now, like time-capsules—physical proof that our love story is a gallery, and every present is a frame. <span class="emoji">🎀📝</span>
-    </p>
-  </section>
-  <!-- 8 -->
-  <section class="reveal slide-in-up">
-    <h2 class="zoom-in">First Real Touch <span class="emoji">🤝✨</span></h2>
-    <p>
-      Chatting is sweet, but the first real handshake? Unforgettable. Nervous grins. Shaky hands. Electricity sparking down our arms. In a crowded corridor, everyone disappeared except we two, twirling, laughing—doing your private Bollywood scene. Even now, thinking of that touch makes your heart do a little somersault.
-    </p>
-    <p class="heart-beat">
-      If moments could last forever, I had live in that corridor spin. One touch was enough to tell both our souls: this isn’t ordinary. <span class="emoji">💖😳</span>
-    </p>
-  </section>
-  <!-- 9 -->
-  <section class="reveal slide-in-left">
-    <h2 class="corridor-spin">One Year, Many Fights <span class="emoji">⏳🔥</span></h2>
-    <p>
-      One year. 365 days. Countless “I miss you.” Fights, but also laughter. Tears, but also healing hugs. Each quarrel was proof of how much you care; each apology was a stepping stone to becoming better, together. You’ve learned her favorite songs (“Tu Hi Haqeeqat” running in the background), discovered how beautiful she looks in pink, and most importantly: that forgiveness and growth are partners in every real relationship.
-    </p>
-    <p class="swing">
-      In this year, i haven’t just loved; i have evolved. Her mischief keeps things lively, your patience keeps things calm. She drives you wild and keeps you sane—all at once. And that’s the magic of “us.” <span class="emoji">💞😇</span>
-    </p>
-  </section>
-  <!-- 10 - LOVE LETTER -->
-  <section class="reveal zoom-in" id="love-letter">
-    <h2 class="marry-title">My Forever Letter 💌</h2>
-    <p style="font-family:'Dancing Script',cursive;font-size:1.21rem;color:#9a39b6;line-height:2;">
-      My beloved Mendhakini,<br><br>
-      Today, as we reach this beautiful milestone—one year of togetherness—I want to put every emotion, every memory, and every heartbeat on paper. From the first message to this very moment, I have loved you in ways words often fail to capture, but I will try.<br><br>
-      Our love story is not just a tale of two people—it's the universe conspiring against the odds, rewriting destiny for the two of us. Remember how shy you were to send that Snap request? How I nervously crafted every reply, hoping you'd laugh at my jokes or blush at my compliments? Those late-night endless chats, the “kitte ja rhe ho ” that began it all—it was as if our souls had already decided, years ago, that we were made for each other.<br><br>
-      Every day, your voice in the form of text is my favorite music. Every smile you send lights up the darkest of my hours. Life before you was a static grayscale—since you walked in, every day is a Holi of wild colors.<br><br>
-      I adore your laughter, the way you mischievously tease me, how your nose wrinkles when you're mad, and the way your “mendhak!” makes me grin no matter what. Our fights make us stronger; our apologies, more loving. I cherish the way we argue over silly things—it’s proof of our honesty and passion. In one year, we have built a bond that no distance, no doubt, could break.<br><br>
-      Your presence calms me; your absence teaches me the meaning of longing. When I scold you, it’s not to hurt, but to help—because I care more than I can ever say. I know my anger may worry you, but it’s only because I want the best for you, for us. You’ve taught me patience, forgiveness, and what it means to grow together. Our journey hasn't always been easy, but I wouldn't trade a single second of it for the world.<br><br>
-      I still remember your birthday, how you missed the message. Each gift—your chocolates, my mendhak plushie, your perfume—are bookmarks in our story, chapters I read over and over in my heart. I treasure our first handshake, the way time froze for a second. I couldn’t breathe, couldn’t think—my whole world was standing there, holding my hand.<br><br>
-      I love the way you look in pink (it really is your color!); I love your stubborn independence and your gentle vulnerability. I adore the way you make even the most ordinary days feel magical. Our inside jokes, secret nicknames, your “badmaashi”—they are the glue that keeps our story unique. When the world confuses or challenges us, our love is the answer. No matter how much you tease or annoy me (and you never stop!), I know I’d miss every bit of it if you changed.<br><br>
-      Today, I promise you: I’ll always try to be the best partner, to correct and support, to learn and grow, and most importantly—to never give up on us, no matter what. This year, I have realized what matters most is not being right, but being there. I love every bit of you, your strengths and your flaws, your joys and your storms.<br><br>
-      Here’s to all the moments behind us, and to all the beautiful tomorrows ahead. Here’s to movie nights, cringey dance sessions, surprise gifts, and endless phone calls. Here’s to the fights that end in hugs and the dreams we have yet to live.<br><br>
-      I love you truly, madly, deeply… for a thousand lifetimes more.<br><br>
-      <span style="display:block;font-family:'Great Vibes',cursive;font-size:2em;text-align:center;color:#ff43a6;margin-top:1em;">Will you marry me?</span>
-      <button class="yes-button" id="yes-btn">YES ❤️</button>
-    </p>
-  </section>
-</main>
-<script>
-  // Reveal sections on scroll
-  const allSections = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
-  }, {threshold:0.15});
-  allSections.forEach(sec=>obs.observe(sec));
-
-  // Fireworks on YES
-  let fired = false;
-  document.getElementById('yes-btn').onclick = function(){
-    if(fired) return;
-    let otp = prompt("Type YES to confirm your answer:");
-    if(!otp) return;
-    if(otp.trim().toLowerCase() !== 'yes') { alert("Type YES (case-insensitive) to proceed!"); return; }
-    fired = true;
-    this.classList.add("clicked");
-    setTimeout(()=>showFirework(),400);
-  }
-  function showFirework(){
-    const cvs = document.getElementById('fireworks-canvas');
-    cvs.width = window.innerWidth; cvs.height = window.innerHeight;
-    cvs.style.display = 'block'; cvs.style.opacity="1";
-    const ctx = cvs.getContext('2d');
-    function randomColor(){
-      const c=['#ff71b7', '#ffd166', '#bb87ff','#7de0d3','#fda94f','#fff946','#ff6a88','#d06eee'];
-      return c[~~(Math.random()*c.length)];
-    }
-    function firework(){
-      for(let c = 0; c < 18; c++){
-        let angle = (2 * Math.PI * c) / 18;
-        let radius = Math.random() * 80 + 60, len = 0;
-        let xc = cvs.width/2, yc=cvs.height*.65;
-        let col = randomColor();
-        let d=0;
-        function animate(){
-          ctx.beginPath();
-          ctx.arc(xc+Math.cos(angle)*len, yc+Math.sin(angle)*len, 7+d/7, 0, 2*Math.PI);
-          ctx.fillStyle=col; ctx.globalAlpha=(1-d/30);
-          ctx.fill();
-          len += 5.6+.1*d;
-          d++;
-          if(d<32)requestAnimationFrame(animate);
-        }
-        animate();
-      }
-    }
-    firework();
-    setTimeout(()=>{cvs.style.opacity="0";}, 3200);
-    setTimeout(()=>{cvs.style.display="none";},3700);
-  }
-</script>
+  </div>
 </body>
 </html>
